@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1e3a5f;
+  --color-primary-dark: #152c47;
+  --color-primary-light: #2a5080;
+  --color-accent: #2563EB;
+  --color-accent-light: #3B82F6;
+  --color-secondary: #06B6D4;
+  --color-secondary-dark: #0891B2;
+  --color-success: #059669;
+  --color-success-light: #10B981;
+  --color-danger: #DC2626;
+  --color-danger-light: #EF4444;
+  --color-warning: #D97706;
+  --color-gold: #B8860B;
+  --color-dark: #0F172A;
+  --color-dark-secondary: #1E293B;
+  --color-gray-900: #111827;
+  --color-gray-700: #374151;
+  --color-gray-600: #4B5563;
+  --color-gray-500: #6B7280;
+  --color-gray-400: #9CA3AF;
+  --color-gray-300: #D1D5DB;
+  --color-gray-200: #E5E7EB;
+  --color-gray-100: #F3F4F6;
+  --color-gray-55: rgba(255, 255, 255, 0.05);
+  
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --spacing: 0.25rem;
+}
+
+/* ── Base Styles ─────────────────────────────── */
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  color: #f1f5f9;
+  background: #0b0f19;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* ── Full Page Background with Overlay ────────── */
+
+.full-page-bg {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.8), rgba(11, 15, 25, 0.93)), url('./assets/bg-exam.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 1.5rem 1rem;
+  z-index: 1;
+}
+
+.full-page-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 50% 30%, rgba(20, 184, 166, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ── Glassmorphism Card (Dark Tint) ──────────── */
+
+.glass-card-dark {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.2), 
+    0 20px 40px -5px rgba(0, 0, 0, 0.4),
+    inset 0 1px 1px rgba(255, 255, 255, 0.05);
+  border-radius: 1.25rem;
+}
+
+.glass-card-dark-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(30, 41, 59, 0.35);
+  border-top-left-radius: 1.25rem;
+  border-top-right-radius: 1.25rem;
+}
+
+/* ── Custom Scrollbar ────────────────────────── */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* ── Form Inputs (Dark Theme with Teal Accent) ─ */
+
+.form-label-teal {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #2dd4bf; /* teal-400 */
+  margin-bottom: 0.375rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form-label-teal .required {
+  color: var(--color-danger-light);
+  font-weight: 400;
+}
+
+.form-input-dark {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  font-family: var(--font-body);
+  color: #f8fafc;
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.5rem;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input-dark:hover:not(:disabled):not(:focus) {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(15, 23, 42, 0.65);
+}
+
+.form-input-dark:focus {
+  border-color: #2dd4bf; /* teal-400 */
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.15);
+  outline: none;
+  background: rgba(15, 23, 42, 0.75);
+}
+
+.form-input-dark::placeholder {
+  color: #64748b; /* slate-500 */
+}
+
+.form-input-dark.error {
+  border-color: var(--color-danger-light);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}
+
+select.form-input-dark {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2.5rem;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-desc-dark {
+  font-size: 0.725rem;
+  color: #94a3b8; /* slate-400 */
+  margin-top: 0.25rem;
+}
+
+.form-error-dark {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  color: #f87171; /* red-400 */
+  margin-top: 0.375rem;
+  font-weight: 500;
+}
+
+/* ── Split Date Field ────────────────────────── */
+
+.date-input-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.date-input-field {
+  width: 3.75rem;
+  height: 2.75rem;
+  text-align: center;
+  padding: 0.5rem 0.25rem !important;
+}
+
+.date-input-field.year {
+  width: 5.5rem;
+}
+
+.date-separator {
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 1.15rem;
+  font-weight: 300;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.75rem; /* align vertically with inputs */
+  line-height: 1;
+}
+
+/* ── Buttons ─────────────────────────────────── */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  font-family: var(--font-body);
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  line-height: 1.25;
+  outline: none;
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn-lg {
+  padding: 0.9rem 2rem;
+  font-size: 0.925rem;
+  border-radius: 0.5rem;
+}
+
+.btn-teal {
+  background: #0d9488; /* teal-600 */
+  color: white;
+  box-shadow: 0 4px 14px 0 rgba(13, 148, 136, 0.25);
+}
+
+.btn-teal:hover:not(:disabled) {
+  background: #0f766e; /* teal-700 */
+  box-shadow: 0 6px 20px 0 rgba(13, 148, 136, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-teal:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-teal-outline {
+  background: transparent;
+  color: #2dd4bf;
+  border: 1px solid rgba(45, 212, 191, 0.35);
+}
+
+.btn-teal-outline:hover:not(:disabled) {
+  background: rgba(45, 212, 191, 0.08);
+  border-color: #2dd4bf;
+}
+
+/* ── Badges ──────────────────────────────────── */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.875rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: 0.375rem;
+}
+
+.badge-success {
+  background: rgba(16, 185, 129, 0.1);
+  color: #34d399;
+  border: 1px solid rgba(52, 211, 153, 0.2);
+}
+
+.badge-danger {
+  background: rgba(239, 68, 68, 0.1);
+  color: #f87171;
+  border: 1px solid rgba(248, 113, 113, 0.2);
+}
+
+/* ── Data Rows ───────────────────────────────── */
+
+.data-table-dark {
+  width: 100%;
+}
+
+.data-row-dark {
+  display: flex;
+  align-items: flex-start;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  gap: 1rem;
+}
+
+.data-row-dark:last-child {
+  border-bottom: none;
+}
+
+.data-label-dark {
+  font-size: 0.775rem;
+  color: #94a3b8; /* slate-400 */
+  width: 10rem;
+  flex-shrink: 0;
+  padding-top: 0.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.data-value-dark {
+  font-size: 0.875rem;
+  color: #f1f5f9;
+  font-weight: 500;
+  flex: 1;
+}
+
+.data-value-dark.mono {
+  font-family: 'SF Mono', 'Fira Code', 'Cascadia Mono', monospace;
+  font-size: 0.825rem;
+  letter-spacing: 0.03em;
+  color: #38bdf8; /* sky-400 */
+}
+
+@media (max-width: 480px) {
+  .data-row-dark {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .data-label-dark {
+    width: auto;
+    font-size: 0.7rem;
+  }
+}
+
+/* ── Result Card Top Headers ────────────────── */
+
+.status-header-lulus-dark {
+  background: linear-gradient(135deg, #0d9488 0%, #1e3a5f 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.status-header-tidak-lulus-dark {
+  background: linear-gradient(135deg, #7f1d1d 0%, #0f172a 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ── Spinner ────────────────────────────────── */
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2.5px solid rgba(255, 255, 255, 0.25);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Custom checkbox styling ────────────────── */
+
+.checkbox-container-dark {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-input-dark {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-custom-dark {
+  height: 1.1rem;
+  width: 1.1rem;
+  background: rgba(15, 23, 42, 0.55);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.25rem;
+  flex-shrink: 0;
+  margin-top: 0.1875rem; /* aligns perfectly center with first line of text */
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-container-dark:hover .checkbox-custom-dark {
+  border-color: #2dd4bf;
+}
+
+.checkbox-input-dark:checked ~ .checkbox-custom-dark {
+  background-color: #0d9488;
+  border-color: #2dd4bf;
+}
+
+.checkbox-custom-dark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 4px;
+  top: 1px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-input-dark:checked ~ .checkbox-custom-dark:after {
+  display: block;
+}
+
+/* ── Toast Animations ────────────────────────── */
+
+@keyframes toast-enter {
+  0% {
+    transform: scale(0.9) translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes toast-leave {
+  0% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9) translateY(-10px);
+    opacity: 0;
+  }
+}
+
+.animate-fade-in {
+  animation: toast-enter 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-out {
+  animation: toast-leave 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
