@@ -102,3 +102,41 @@ export function isPMBType(type) {
 export function isCertificationType(type) {
   return ['sertifikasi-bnsp', 'sertifikasi-kemnaker'].includes(type);
 }
+
+/**
+ * Get the base path of the application dynamically from window.location
+ * @returns {string}
+ */
+export function getAppBasePath() {
+  const pathname = window.location.pathname;
+  let base = pathname;
+  
+  if (base.includes('/verify/')) {
+    base = base.substring(0, base.indexOf('/verify/'));
+  } else if (base.includes('/verify')) {
+    base = base.substring(0, base.indexOf('/verify'));
+  }
+  
+  if (base.includes('/result')) {
+    base = base.substring(0, base.indexOf('/result'));
+  }
+  
+  if (!base.endsWith('/')) {
+    base = base + '/';
+  }
+  
+  return base;
+}
+
+/**
+ * Get basename suitable for React Router
+ * @returns {string}
+ */
+export function getRouterBasename() {
+  const base = getAppBasePath();
+  if (base === '/') return '/';
+  if (base.endsWith('/')) {
+    return base.slice(0, -1);
+  }
+  return base;
+}

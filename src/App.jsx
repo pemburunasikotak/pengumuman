@@ -1,12 +1,13 @@
 import { BrowserRouter } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
-import Header from './components/Header';
-import Footer from './components/Footer';
+// import Header from './components/Header';
+// import Footer from './components/Footer';
 import AppRoutes from './routes/AppRoutes';
+import { getRouterBasename } from './utils/helpers';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={getRouterBasename()}>
       <div className="flex flex-col max-h-screen">
         {/* <Header /> */}
         <main className="flex-1">

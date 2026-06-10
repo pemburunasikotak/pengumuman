@@ -1,8 +1,9 @@
 import { QRCode } from 'react-qr-code';
 import { motion } from 'framer-motion';
+import { getAppBasePath } from '../utils/helpers';
 
 export default function QRVerification({ verificationId, size = 160 }) {
-  const verifyUrl = `${window.location.origin}/verify/${verificationId}`;
+  const verifyUrl = `${window.location.origin}${getAppBasePath()}verify/${verificationId}`;
 
   return (
     <motion.div

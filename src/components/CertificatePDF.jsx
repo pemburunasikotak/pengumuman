@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
 import { QRCode } from 'react-qr-code';
-import { formatDateIndoFull } from '../utils/helpers';
+import { formatDateIndoFull, getAppBasePath } from '../utils/helpers';
 import logoTutWuri from '../assets/logo-tut-wuri.png';
 import logoPpns from '../assets/logo-ppns.png';
 import logoBlu from '../assets/logo-blu.png';
@@ -24,7 +24,7 @@ const formatScore = (num) => {
 };
 
 const CertificatePDF = forwardRef(({ participant }, ref) => {
-  const verifyUrl = `${window.location.origin}/verify/${participant.nomorPeserta}`;
+  const verifyUrl = `${window.location.origin}${getAppBasePath()}verify/${participant.nomorPeserta}`;
   const examYear = getExamYear(participant.nomorPeserta);
 
   return (
