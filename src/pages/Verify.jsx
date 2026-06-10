@@ -150,17 +150,17 @@ export default function Verify() {
                       )}
                       <VerifyRow label="Tanggal Lahir" value={formatDate(data.tanggalLahir)} />
                       <VerifyRow label="Jenis Seleksi" value={getExamLabel(data.jenisSeleksi)} />
-                      <div className="data-row-dark">
+                      {/* <div className="data-row-dark">
                         <span className="data-label-dark">Status</span>
                         <span className="data-value-dark">
                           <span className={`badge ${data.status === 'LULUS' ? 'badge-success' : 'badge-danger'}`}>
                             {data.status}
                           </span>
                         </span>
-                      </div>
-                      {data.keterangan && (
+                      </div> */}
+                      {/* {data.keterangan && (
                         <VerifyRow label="Keterangan" value={data.keterangan} />
-                      )}
+                      )} */}
                     </div>
                   </div>
 
