@@ -92,7 +92,7 @@ export async function verifyDocument(id) {
   try {
     const nomorPeserta = id.replace('VRF-', '');
     const url = new URL(GAS_API_URL);
-    url.searchParams.append('action', 'search');
+    url.searchParams.append('action', 'verif');
     url.searchParams.append('nomor_peserta', nomorPeserta);
 
     const response = await fetch(url.toString(), {
