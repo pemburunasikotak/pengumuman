@@ -187,7 +187,7 @@ export default function Verify() {
                     </div>
                   )}
 
-                  {data.programStudi && data.status === 'LULUS' && (
+                  {/* {data.programStudi && data.status === 'LULUS' && (
                     <div className="mb-5">
                       <h3 className="text-xs font-bold text-teal-400 uppercase tracking-widest mb-3 border-b border-white/5 pb-1">
                         Penerimaan Perguruan Tinggi
@@ -197,7 +197,7 @@ export default function Verify() {
                         <VerifyRow label="Program Studi" value={data.programStudi} bold />
                       </div>
                     </div>
-                  )}
+                  )} */}
 
                   {isCertificationType(data.jenisSeleksi) && (
                     <div className="mb-5">
