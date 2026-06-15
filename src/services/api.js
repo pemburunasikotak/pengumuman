@@ -72,6 +72,7 @@ export async function searchResult(data) {
       keterangan: found.keterangan,
       jenisSeleksi: data.jenisUjian,
       perguruanTinggi: 'Politeknik Negeri Surabaya',
+      curang: found.curang,
     };
 
     return { data: mapped };

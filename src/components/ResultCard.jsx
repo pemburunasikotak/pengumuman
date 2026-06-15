@@ -232,7 +232,7 @@ export default function ResultCard({ participant }) {
               </div>
 
               {/* Action button inside card */}
-              <div className="pt-4 border-t border-white/15">
+              <div className={`pt-4 border-t border-white/15 ${participant?.curang == "ya" ? "hidden" : ""}`}>
                 <button
                   onClick={handleDownloadPDF}
                   disabled={isDownloading}
@@ -250,7 +250,7 @@ export default function ResultCard({ participant }) {
                       </svg>
                       <span>UNDUH SERTIFIKAT HASIL (PDF)</span>
                     </>
-                  )}
+                  )} 
                 </button>
               </div>
             </div>
