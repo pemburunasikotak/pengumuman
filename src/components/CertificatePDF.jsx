@@ -137,19 +137,19 @@ const CertificatePDF = forwardRef(({ participant }, ref) => {
                 <div className="space-y-1 text-[11px] pl-2" style={{ color: '#475569' }}>
                   <div className="flex justify-between">
                     <span>Kemampuan Penalaran Umum</span>
-                    <span className="font-mono font-semibold" style={{ color: '#000000' }}>{formatScore(participant.kpu)}</span>
+                    <span className="font-mono font-semibold" style={{ color: '#000000' }}>{participant.kpu}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Pengetahuan dan Pemahaman Umum</span>
-                    <span className="font-mono font-semibold" style={{ color: '#000000' }}>{formatScore(participant.ppu)}</span>
+                    <span className="font-mono font-semibold" style={{ color: '#000000' }}>{participant.ppu}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Kemampuan Memahami Bacaan dan Menulis</span>
-                    <span className="font-mono font-semibold" style={{ color: '#000000' }}>{formatScore(participant.kmbm)}</span>
+                    <span className="font-mono font-semibold" style={{ color: '#000000' }}>{participant.kmbm}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Pengetahuan Kuantitatif</span>
-                    <span className="font-mono font-semibold" style={{ color: '#000000' }}>{formatScore(participant.pk)}</span>
+                    <span className="font-mono font-semibold" style={{ color: '#000000' }}>{participant.pk}</span>
                   </div>
                 </div>
               </div>
@@ -163,15 +163,15 @@ const CertificatePDF = forwardRef(({ participant }, ref) => {
                 <div className="space-y-1 text-[11px] pl-2" style={{ color: '#475569' }}>
                   <div className="flex justify-between">
                     <span>Literasi dalam Bahasa Indonesia</span>
-                    <span className="font-mono font-semibold" style={{ color: '#000000' }}>{formatScore(participant.literasiIndonesia)}</span>
+                    <span className="font-mono font-semibold" style={{ color: '#000000' }}>{participant.literasiIndonesia || ""}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Literasi dalam Bahasa Inggris</span>
-                    <span className="font-mono font-semibold" style={{ color: '#000000' }}>{formatScore(participant.literasiInggris)}</span>
+                    <span className="font-mono font-semibold" style={{ color: '#000000' }}>{participant.literasiInggris|| ""}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Penalaran Matematika</span>
-                    <span className="font-mono font-semibold" style={{ color: '#000000' }}>{formatScore(participant.penalaranMatematika)}</span>
+                    <span className="font-mono font-semibold" style={{ color: '#000000' }}>{participant.penalaranMatematika|| ""}</span>
                   </div>
                 </div>
               </div>
