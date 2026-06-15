@@ -219,17 +219,23 @@ export default function ResultCard({ participant }) {
               </div>
 
               {/* Negative Result Announcement */}
-              <div className="space-y-4 py-2">
-                <p className="text-base sm:text-lg font-extrabold leading-normal text-yellow-300">
-                  Peserta dengan nomor peserta {participant.nomorPeserta} dinyatakan TIDAK LULUS SELEKSI SM-KPN 2026.
-                </p>
-                <p className="text-sm sm:text-base font-bold text-white/90 leading-relaxed uppercase tracking-wider">
-                  JANGAN PATAH SEMANGAT!
-                </p>
-                <p className="text-xs sm:text-sm text-white/80 leading-relaxed">
-                  Terima kasih telah berjuang dalam seleksi ini. Kegagalan hari ini bukanlah akhir dari segalanya. Masih ada banyak jalur penerimaan lain yang menanti Anda di masa depan. Tetaplah bersemangat dan teruslah berusaha!
-                </p>
-              </div>
+              {participant?.curang == "ya" ? 
+                <div className="space-y-4 py-2">
+                  HASIL NILAI UJIAN SM-KPN TIDAK DIBERIKAN, karena Anda melakukan Pelanggaran Tata Tertib Ujian SK-PPNS.
+                </div>
+              :
+                <div className="space-y-4 py-2">
+                  <p className="text-base sm:text-lg font-extrabold leading-normal text-yellow-300">
+                    Peserta dengan nomor peserta {participant.nomorPeserta} dinyatakan TIDAK LULUS SELEKSI SM-KPN 2026.
+                  </p>
+                  <p className="text-sm sm:text-base font-bold text-white/90 leading-relaxed uppercase tracking-wider">
+                    JANGAN PATAH SEMANGAT!
+                  </p>
+                  <p className="text-xs sm:text-sm text-white/80 leading-relaxed">
+                    Terima kasih telah berjuang dalam seleksi ini. Kegagalan hari ini bukanlah akhir dari segalanya. Masih ada banyak jalur penerimaan lain yang menanti Anda di masa depan. Tetaplah bersemangat dan teruslah berusaha!
+                  </p>
+                </div>
+              }
 
               {/* Action button inside card */}
               <div className={`pt-4 border-t border-white/15 ${participant?.curang == "ya" ? "hidden" : ""}`}>
