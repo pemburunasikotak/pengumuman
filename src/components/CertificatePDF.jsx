@@ -16,12 +16,12 @@ const getExamYear = (nomorPeserta) => {
   return new Date().getFullYear();
 };
 
-const formatScore = (num) => {
-  if (num === undefined || num === null || isNaN(num)) return '0.00 (0.00)';
-  const firstPart = Number(num / 7.4874).toFixed(2);
-  const secondPart = Number(num).toFixed(2);
-  return `${firstPart}  (${secondPart})`;
-};
+// const formatScore = (num) => {
+//   if (num === undefined || num === null || isNaN(num)) return '0.00 (0.00)';
+//   const firstPart = Number(num / 7.4874).toFixed(2);
+//   const secondPart = Number(num).toFixed(2);
+//   return `${firstPart}  (${secondPart})`;
+// };
 
 const CertificatePDF = forwardRef(({ participant }, ref) => {
   const verifyUrl = `${window.location.origin}${getAppBasePath()}verify/${participant.nomorPeserta}`;
@@ -124,7 +124,7 @@ const CertificatePDF = forwardRef(({ participant }, ref) => {
           <div className="space-y-4">
             <div className="flex justify-between items-baseline pb-1" style={{ borderBottom: '2px solid #000000' }}>
               <span className="font-bold text-sm" style={{ color: '#000000' }}>Nilai Akhir:</span>
-              <span className="font-bold text-base font-mono" style={{ color: '#000000' }}>{formatScore(participant.nilaiAkhir)}</span>
+              <span className="font-bold text-base font-mono" style={{ color: '#000000' }}>{participant?.nilaiAkhir || ""}</span>
             </div>
             <div className="space-y-3">
               <div>
@@ -137,19 +137,19 @@ const CertificatePDF = forwardRef(({ participant }, ref) => {
                 <div className="space-y-1 text-[11px] pl-2" style={{ color: '#475569' }}>
                   <div className="flex justify-between">
                     <span>Kemampuan Penalaran Umum</span>
-                    <span className="font-mono font-semibold" style={{ color: '#000000' }}>{participant.kpu}</span>
+                    <span className="font-mono font-semibold" style={{ color: '#000000' }}>{participant?.kpu}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Pengetahuan dan Pemahaman Umum</span>
-                    <span className="font-mono font-semibold" style={{ color: '#000000' }}>{participant.ppu}</span>
+                    <span className="font-mono font-semibold" style={{ color: '#000000' }}>{participant?.ppu}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Kemampuan Memahami Bacaan dan Menulis</span>
-                    <span className="font-mono font-semibold" style={{ color: '#000000' }}>{participant.kmbm}</span>
+                    <span className="font-mono font-semibold" style={{ color: '#000000' }}>{participant?.kmbm}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Pengetahuan Kuantitatif</span>
-                    <span className="font-mono font-semibold" style={{ color: '#000000' }}>{participant.pk}</span>
+                    <span className="font-mono font-semibold" style={{ color: '#000000' }}>{participant?.pk}</span>
                   </div>
                 </div>
               </div>
