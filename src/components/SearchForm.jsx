@@ -88,7 +88,7 @@ export default function SearchForm() {
           id="nomorPeserta"
           type="text"
           className={`form-input-dark h-12 rounded-xl border-white/10 bg-[#0c1427]/70 text-slate-100 placeholder-slate-600 focus:border-teal-400 focus:ring-1 focus:ring-teal-400 transition-all ${errors.nomorPeserta ? 'error' : ''}`}
-          placeholder="Contoh: SMK001"
+          placeholder="Contoh: 0000000000"
           {...register('nomorPeserta', {
             required: 'Nomor peserta wajib diisi',
             minLength: { value: 6, message: 'Nomor peserta minimal 6 karakter' },
