@@ -104,7 +104,7 @@ const CertificatePDF = forwardRef(({ participant }, ref) => {
           Telah mengikuti ujian Seleksi Mandiri Seleksi Konsorsium Politeknik Negeri (SM-KPN) pada tanggal
           <span className="font-bold" style={{ color: '#000000' }}> {participant.nomorPeserta === '2415100008' ? '6 JUNI 2026' : formatDateIndoFull(participant.tanggalUjian)}</span> dan berlaku untuk penerimaan mahasiswa baru {participant.nomorPeserta === '2415100008' ? '2026' : examYear} dengan hasil sebagai berikut:
         </div>
-        <div className="grid grid-cols-[200px_1fr] gap-4 mt-12 px-4 items-start">
+        <div className="grid grid-cols-[170px_1fr] gap-4 mt-12 px-4 items-start">
           <div 
             className="flex flex-col items-center justify-center p-3 rounded-lg mt-2"
             style={{ border: '1px solid #e2e8f0', backgroundColor: '#ffffff', boxShadow: '0 1px 2px 0 rgba(0, 0, 0, 0.05)' }}
@@ -123,13 +123,13 @@ const CertificatePDF = forwardRef(({ participant }, ref) => {
           </div>
           <div className="space-y-4">
             <div className="flex justify-between items-baseline pb-1" style={{ borderBottom: '2px solid #000000' }}>
-              <span className="font-bold text-sm" style={{ color: '#000000' }}>Nilai Akhir:</span>
-              <span className="font-bold text-base font-mono" style={{ color: '#000000' }}>{participant?.nilaiAkhir || ""}</span>
+              <span className="font-bold text-[12px] whitespace-nowrap" style={{ color: '#000000' }}>Nilai Akhir : Nilai Skor Ujian (Nilai Standar Rata-rata)</span>
+              <span className="font-bold text-sm font-mono whitespace-nowrap" style={{ color: '#000000' }}>{participant?.nilaiAkhir || ""}</span>
             </div>
             <div className="space-y-3">
               <div>
                 <div 
-                  className="font-bold text-[11px] uppercase tracking-wide pb-0.5 mb-1.5" 
+                  className="font-bold text-[11px] uppercase tracking-wide pb-1.5 mb-1.5" 
                   style={{ color: '#1e293b', borderBottom: '1px solid #cbd5e1' }}
                 >
                   Tes Potensi Skolastik:
@@ -155,7 +155,7 @@ const CertificatePDF = forwardRef(({ participant }, ref) => {
               </div>
               <div>
                 <div 
-                  className="font-bold text-[11px] uppercase tracking-wide pb-0.5 mb-1.5" 
+                  className="font-bold text-[11px] uppercase tracking-wide pb-1.5 mb-1.5" 
                   style={{ color: '#1e293b', borderBottom: '1px solid #cbd5e1' }}
                 >
                   Tes Literasi:
