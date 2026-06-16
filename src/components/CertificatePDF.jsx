@@ -62,7 +62,7 @@ const CertificatePDF = forwardRef(({ participant }, ref) => {
             SERTIFIKAT HASIL
           </h2>
           <h3 className="text-sm font-bold tracking-widest uppercase mt-1" style={{ color: '#334155' }}>
-            UJIAN SELEKSI MANDIRI INTERNET-BASED TEST (SM iBT) 2026
+            UJIAN SELEKSI MANDIRI KONSORSIUM POLITEKNIK NEGERI (SM-KPN) 2026
           </h3>
           <div className="w-full mt-3 h-[4px]" style={{ backgroundColor: '#000000' }} />
           <div className="w-full mt-[2px] h-[1px]" style={{ backgroundColor: '#000000' }} />
