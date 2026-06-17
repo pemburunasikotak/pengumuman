@@ -27,9 +27,9 @@ export default function AppRoutes() {
     return () => clearInterval(interval);
   }, [isBeforeRelease]);
 
-  if (isBeforeRelease) {
-    return <Countdown targetDate={targetDateStr} onComplete={() => setIsBeforeRelease(false)} />;
-  }
+  // if (isBeforeRelease) {
+  //   return <Countdown targetDate={targetDateStr} onComplete={() => setIsBeforeRelease(false)} />;
+  // }
 
   return (
     <Routes>
