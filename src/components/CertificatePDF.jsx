@@ -54,6 +54,9 @@ const CertificatePDF = forwardRef(({ participant }, ref) => {
               <div className="text-[6px] font-bold uppercase tracking-normal mt-1 whitespace-nowrap" style={{ fontFamily: "'Inter', sans-serif", color: '#000000' }}>
                 SELEKSI MANDIRI KONSORSIUM POLITEKNIK NEGERI
               </div>
+              <div className="text-[6px] font-bold uppercase tracking-normal mt-1 whitespace-nowrap" style={{ fontFamily: "'Inter', sans-serif", color: '#000000' }}>
+                JALUR SELEKSI KONSORSIUM PPNS 
+              </div>
             </div>
           </div>
         </div>
@@ -64,6 +67,12 @@ const CertificatePDF = forwardRef(({ participant }, ref) => {
           <h3 className="text-sm font-bold tracking-widest uppercase mt-1" style={{ color: '#334155' }}>
             UJIAN SELEKSI MANDIRI KONSORSIUM POLITEKNIK NEGERI (SM-KPN) 2026
           </h3>
+          <h3 className="text-sm font-bold tracking-widest uppercase mt-1" style={{ color: '#334155' }}>
+            SELEKSI KONSORSIUM POLITEKNIK PERKAPALAN NEGERI SURABAYA (SKPPNS) 
+          </h3>
+          {/* <h3 className="text-sm font-bold tracking-widest uppercase mt-1" style={{ color: '#334155' }}>
+            JALUR SELEKSI KONSORSIUM PPNS 2026
+          </h3> */}
           <div className="w-full mt-3 h-[4px]" style={{ backgroundColor: '#000000' }} />
           <div className="w-full mt-[2px] h-[1px]" style={{ backgroundColor: '#000000' }} />
         </div>
@@ -101,7 +110,7 @@ const CertificatePDF = forwardRef(({ participant }, ref) => {
           </div>
         </div>
         <div className="px-4 mt-6 text-[12px] text-justify leading-relaxed" style={{ color: '#334155' }}>
-          Telah mengikuti ujian Seleksi Mandiri Seleksi Konsorsium Politeknik Negeri (SM-KPN) pada tanggal
+          Telah mengikuti ujian Seleksi Mandiri Seleksi Konsorsium Politeknik Negeri (SM-KPN) pada tanggal melalui Jalur Seleksi Konsorsium Politeknik Perkapalan Negeri Surabaya (SKPPNS) 
           <span className="font-bold" style={{ color: '#000000' }}> {participant.nomorPeserta === '2415100008' ? '6 JUNI 2026' : formatDateIndoFull(participant.tanggalUjian)}</span> dan berlaku untuk penerimaan mahasiswa baru {participant.nomorPeserta === '2415100008' ? '2026' : examYear} dengan hasil sebagai berikut:
         </div>
         <div className="grid grid-cols-[170px_1fr] gap-4 mt-12 px-4 items-start">
@@ -183,7 +192,7 @@ const CertificatePDF = forwardRef(({ participant }, ref) => {
         <div className="flex justify-between items-end text-[8px] font-medium" style={{ color: '#64748b' }}>
           <div>
             <span>Diterbitkan oleh:</span>
-            <span className="block font-bold uppercase" style={{ color: '#334155' }}>Panitia Seleksi Mandiri PPNS</span>
+            <span className="block font-bold uppercase" style={{ color: '#334155' }}>Panitia Seleksi KONSORSIUM PPNS</span>
             <span className="block mt-0.5">Dokumen ini sah dan diverifikasi secara elektronik. Pindai QR code untuk verifikasi keaslian.</span>
           </div>
           <div className="text-right">

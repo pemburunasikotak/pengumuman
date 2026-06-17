@@ -71,7 +71,7 @@ export async function searchResult(data) {
       programStudi: found.program_studi,
       keterangan: found.keterangan,
       jenisSeleksi: data.jenisUjian,
-      perguruanTinggi: 'Politeknik Negeri Surabaya',
+      perguruanTinggi: data.perguruanTinggi,
       curang: found.curang,
     };
 
@@ -136,7 +136,7 @@ export async function verifyDocument(id) {
       programStudi: found.program_studi,
       keterangan: found.keterangan,
       jenisSeleksi: 'smkpn',
-      perguruanTinggi: 'Politeknik Negeri Surabaya',
+      perguruanTinggi: found.perguruanTinggi,
       verified: true,
       verifiedAt: new Date().toISOString(),
       curang: found.curang,

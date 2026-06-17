@@ -67,7 +67,7 @@ export function getCurrentYear() {
  * Exam type labels
  */
 export const EXAM_TYPES = [
-  { value: 'smkpn', label: 'SMKPN' },
+  { value: 'smkpn', label: 'SM-KPN (SKPPNS)' },
   { value: 'pascasarjana', label: 'Pascasarjana' },
   { value: 'sertifikasi-bnsp', label: 'Sertifikasi BNSP' },
   { value: 'sertifikasi-kemnaker', label: 'Sertifikasi Kemnaker' },

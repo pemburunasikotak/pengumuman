@@ -40,6 +40,33 @@ export default function Verify() {
     );
   }
 
+  if (data.curang ==="ya") {
+    return (
+      <div className="full-page-bg">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.97 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="glass-card-dark p-8 max-w-md w-full text-center"
+        >
+          <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-rose-500/10 border border-rose-500/25 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-7 h-7 text-rose-400">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12v-.008Z" />
+            </svg>
+          </div>
+          <h2 className="text-base font-bold text-white mb-2 uppercase tracking-wider" style={{ fontFamily: 'var(--font-heading)' }}>
+            Dokumen Terdeteksi Adanya Kecurangan
+          </h2>
+          <p className="text-slate-300 text-xs mb-6 leading-relaxed">{error}</p>
+          <button 
+            onClick={() => navigate('/')} 
+            className="btn btn-teal text-xs font-bold w-full cursor-pointer"
+          >
+            KEMBALI KE BERANDA
+          </button>
+        </motion.div>
+      </div>
+    );
+  }
   if (error) {
     return (
       <div className="full-page-bg">
@@ -111,7 +138,7 @@ export default function Verify() {
                     Verifikasi Dokumen Digital
                   </h1>
                   <p className="text-teal-400 text-xs font-semibold">
-                    Konsorsium Politeknik Negeri Republik Indonesia
+                    Seleksi Konsorsium Politeknik Perkapalan Negeri Surabaya (SKPPNS) 
                   </p>
                 </div>
               </div>
@@ -126,7 +153,7 @@ export default function Verify() {
                 <div>
                   <p className="text-xs font-bold text-teal-400 uppercase tracking-wider">Status Dokumen: VALID</p>
                   <p className="text-[0.725rem] text-slate-300 mt-0.5 leading-relaxed">
-                    Data di bawah ini merupakan informasi resmi hasil seleksi/kelulusan peserta yang sah dan terdaftar pada pangkalan data Konsorsium Politeknik Negeri.
+                    Data di bawah ini merupakan informasi resmi hasil ujian peserta yang sah dan terdaftar pada pangkalan data Seleksi Konsorsium Politeknik Perkapalan Negeri Surabaya.. 
                   </p>
                 </div>
               </div>
@@ -251,7 +278,7 @@ export default function Verify() {
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 shrink-0">
                     <path fillRule="evenodd" d="M8 1a3.5 3.5 0 0 0-3.5 3.5V7A1.5 1.5 0 0 0 3 8.5v5A1.5 1.5 0 0 0 4.5 15h7a1.5 1.5 0 0 0 1.5-1.5v-5A1.5 1.5 0 0 0 11.5 7V4.5A3.5 3.5 0 0 0 8 1Zm2 6V4.5a2 2 0 1 0-4 0V7h4Z" clipRule="evenodd" />
                   </svg>
-                  KONSORSIUM POLITEKNIK NEGERI
+                  SELEKSI KONSORSIUM PPNS
                 </span>
               </div>
             </div>

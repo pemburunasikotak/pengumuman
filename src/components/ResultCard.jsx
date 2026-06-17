@@ -106,6 +106,9 @@ export default function ResultCard({ participant }) {
             <h1 className="font-extrabold text-sm sm:text-base md:text-lg tracking-normal uppercase leading-tight drop-shadow">
               SELEKSI MANDIRI KONSORSIUM POLITEKNIK NEGERI
             </h1>
+            <h1 className="font-extrabold text-sm sm:text-base md:text-lg tracking-normal uppercase leading-tight drop-shadow">
+              JALUR SELEKSI KONSORSIUM PPNS (SKPPNS) 
+            </h1>
           </div>
         </div>
 
@@ -141,7 +144,7 @@ export default function ResultCard({ participant }) {
                 {/* Congratulatory Text */}
                 <div className="py-1">
                   <p className="text-xs sm:text-sm leading-relaxed font-medium">
-                    Terima kasih Anda telah mengikuti <b>Ujian Seleksi Mandiri Seleksi Konsorsium Politeknik Negeri (SM-KPN)</b> yang diselenggarakan oleh
+                    Terima kasih Anda telah mengikuti <b>Ujian Seleksi Mandiri Konsorsium Politeknik Negeri (SM-KPN)</b>melalui jalur <b>Seleksi  Konsorsium PPNS (SKPPNS) 2026</b> yang diselenggarakan oleh
                   </p>
                 </div>
 
@@ -150,7 +153,7 @@ export default function ResultCard({ participant }) {
                   <div>PTN</div>
                   <div>:</div>
                   <div className="font-extrabold uppercase text-yellow-300">
-                    {participant.perguruanTinggi === 'Politeknik Negeri Surabaya' ? 'POLITEKNIK PERKAPALAN NEGERI SURABAYA' : (participant.perguruanTinggi || 'POLITEKNIK PERKAPALAN NEGERI SURABAYA')}
+                    {participant.perguruanTinggi === 'Politeknik Perkapalan Negeri Surabaya' ? 'POLITEKNIK PERKAPALAN NEGERI SURABAYA' : (participant.perguruanTinggi || 'POLITEKNIK PERKAPALAN NEGERI SURABAYA')}
                   </div>
 
                   <div>Tanggal Ujian</div>
@@ -163,7 +166,7 @@ export default function ResultCard({ participant }) {
                 {/* Instructions / Info Links */}
                 <div className="pt-2 text-xs sm:text-sm leading-relaxed text-white/95">
                   <p>
-                    Pengumuman hasil seleksi bagi peserta yang dinyatakan lolos seleksi jalur SK-PPNS 2026 dapat dilihat di{' '}
+                    Pengumuman hasil seleksi bagi peserta yang dinyatakan lolos seleksi jalur SKPPNS 2026 dapat dilihat di{' '}
                     <a
                       href="https://pmb.ppns.ac.id/"
                       target="_blank"
@@ -221,18 +224,18 @@ export default function ResultCard({ participant }) {
               {/* Negative Result Announcement */}
               {participant?.curang == "ya" ? 
                 <div className="space-y-4 py-2">
-                  HASIL NILAI UJIAN SM-KPN TIDAK DIBERIKAN, karena Anda melakukan Pelanggaran Tata Tertib Ujian SK-PPNS.
+                  HASIL NILAI UJIAN TIDAK DIBERIKAN, karena Anda melakukan Pelanggaran Tata Tertib Ujian .
                 </div>
               :
                 <div className="space-y-4 py-2">
                   <p className="text-base sm:text-lg font-extrabold leading-normal text-yellow-300">
-                    Peserta dengan nomor peserta {participant.nomorPeserta} dinyatakan TIDAK LULUS SELEKSI SM-KPN 2026.
+                    Peserta dengan nomor peserta {participant.nomorPeserta} dinyatakan TIDAK LULUS SELEKSI JALUR SKPPNS 2026.
                   </p>
                   <p className="text-sm sm:text-base font-bold text-white/90 leading-relaxed uppercase tracking-wider">
                     JANGAN PATAH SEMANGAT!
                   </p>
                   <p className="text-xs sm:text-sm text-white/80 leading-relaxed">
-                    Terima kasih telah berjuang dalam seleksi ini. Kegagalan hari ini bukanlah akhir dari segalanya. Masih ada banyak jalur penerimaan lain yang menanti Anda di masa depan. Tetaplah bersemangat dan teruslah berusaha!
+                    Terima kasih telah berjuang dalam seleksi ini. Kegagalan hari ini bukanlah akhir dari segalanya. Masih ada banyak jalur penerimaan lain yang menanti Anda di  jalur seleksi berikutnya. Tetaplah bersemangat dan teruslah berusaha!
                   </p>
                 </div>
               }

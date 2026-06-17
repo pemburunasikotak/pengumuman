@@ -92,7 +92,7 @@ export default function Countdown({ targetDate, onComplete }) {
               transition={{ delay: 0.2 }}
               className="text-[0.65rem] text-teal-400 font-extrabold uppercase tracking-[0.25em] mb-4"
             >
-              POLITEKNIK NEGERI SURABAYA
+              POLITEKNIK PERKAPALAN NEGERI SURABAYA
             </motion.p>
 
             {/* Main Title & Subtitle */}
@@ -107,7 +107,7 @@ export default function Countdown({ targetDate, onComplete }) {
                 PENGUMUMAN SERTIFIKAT DAN HASIL NILAI UJIAN
               </span>
               <span className="block text-[0.7rem] sm:text-xs md:text-sm font-medium text-slate-300 uppercase tracking-wider mt-2">
-                SELEKSI MANDIRI KONSORSIUM POLITEKNIK NEGERI
+                SELEKSI MANDIRI KONSORSIUM POLITEKNIK NEGERI 
               </span>
             </motion.h1>
 

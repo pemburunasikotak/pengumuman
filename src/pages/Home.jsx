@@ -37,7 +37,7 @@ export default function Home() {
               transition={{ delay: 0.2 }}
               className="text-[0.65rem] text-teal-400 font-extrabold uppercase tracking-[0.25em] mb-4"
             >
-              POLITEKNIK NEGERI SURABAYA
+              POLITEKNIK PERKAPALAN NEGERI SURABAYA
             </motion.p>
 
             {/* Main Title & Subtitle */}
@@ -64,7 +64,7 @@ export default function Home() {
               className="mt-6"
             >
               <span className="inline-flex items-center px-10 py-2.5 rounded-full bg-[#081e24]/75 border border-[#144f5b]/55 text-xs sm:text-sm font-extrabold tracking-widest text-[#2dd4bf] uppercase shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)]">
-                SK-PPNS 2026
+                SKPPNS 2026 
               </span>
             </motion.div>
           </div>
