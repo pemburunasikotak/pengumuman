@@ -153,7 +153,7 @@ export default function Verify() {
                 <div>
                   <p className="text-xs font-bold text-teal-400 uppercase tracking-wider">Status Dokumen: VALID</p>
                   <p className="text-[0.725rem] text-slate-300 mt-0.5 leading-relaxed">
-                    Data di bawah ini merupakan informasi resmi hasil ujian peserta yang sah dan terdaftar pada pangkalan data Seleksi Konsorsium Politeknik Perkapalan Negeri Surabaya.. 
+                    Data di bawah ini merupakan informasi resmi hasil ujian peserta yang sah dan terdaftar pada pangkalan data Seleksi Konsorsium Politeknik Perkapalan Negeri Surabaya. 
                   </p>
                 </div>
               </div>

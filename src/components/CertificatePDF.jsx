@@ -110,7 +110,7 @@ const CertificatePDF = forwardRef(({ participant }, ref) => {
           </div>
         </div>
         <div className="px-4 mt-6 text-[12px] text-justify leading-relaxed" style={{ color: '#334155' }}>
-          Telah mengikuti ujian Seleksi Mandiri Seleksi Konsorsium Politeknik Negeri (SM-KPN) pada tanggal melalui Jalur Seleksi Konsorsium Politeknik Perkapalan Negeri Surabaya (SKPPNS) 
+          Telah mengikuti ujian Seleksi Mandiri Seleksi Konsorsium Politeknik Negeri (SM-KPN) melalui Jalur Seleksi Konsorsium Politeknik Perkapalan Negeri Surabaya (SKPPNS) pada tanggal
           <span className="font-bold" style={{ color: '#000000' }}> {participant.nomorPeserta === '2415100008' ? '6 JUNI 2026' : formatDateIndoFull(participant.tanggalUjian)}</span> dan berlaku untuk penerimaan mahasiswa baru {participant.nomorPeserta === '2415100008' ? '2026' : examYear} dengan hasil sebagai berikut:
         </div>
         <div className="grid grid-cols-[170px_1fr] gap-4 mt-12 px-4 items-start">

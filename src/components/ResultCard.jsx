@@ -144,7 +144,7 @@ export default function ResultCard({ participant }) {
                 {/* Congratulatory Text */}
                 <div className="py-1">
                   <p className="text-xs sm:text-sm leading-relaxed font-medium">
-                    Terima kasih Anda telah mengikuti <b>Ujian Seleksi Mandiri Konsorsium Politeknik Negeri (SM-KPN)</b>melalui jalur <b>Seleksi  Konsorsium PPNS (SKPPNS) 2026</b> yang diselenggarakan oleh
+                    Terima kasih Anda telah mengikuti <b>Ujian Seleksi Mandiri Konsorsium Politeknik Negeri (SM-KPN)</b> melalui jalur <b>Seleksi  Konsorsium PPNS (SKPPNS) 2026</b> yang diselenggarakan oleh
                   </p>
                 </div>
 
@@ -224,7 +224,7 @@ export default function ResultCard({ participant }) {
               {/* Negative Result Announcement */}
               {participant?.curang == "ya" ? 
                 <div className="space-y-4 py-2">
-                  HASIL NILAI UJIAN TIDAK DIBERIKAN, karena Anda melakukan Pelanggaran Tata Tertib Ujian .
+                  HASIL NILAI UJIAN TIDAK DIBERIKAN, karena Anda melakukan Pelanggaran Tata Tertib Ujian <b>SKPPNS</b>.
                 </div>
               :
                 <div className="space-y-4 py-2">

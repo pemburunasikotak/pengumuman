@@ -54,6 +54,9 @@ export default function Home() {
               <span className="block text-[0.7rem] sm:text-xs md:text-sm font-medium text-slate-300 uppercase tracking-wider mt-2">
                 SELEKSI MANDIRI KONSORSIUM POLITEKNIK NEGERI
               </span>
+              <span className="block text-[0.7rem] sm:text-xs md:text-sm font-medium text-slate-300 uppercase tracking-wider mt-2">
+                Jalur seleksi konsorsium ppns
+              </span>
             </motion.h1>
 
             {/* Year Badge */}
